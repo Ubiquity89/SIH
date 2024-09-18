@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
+
+body {
+  /* font-family: "Poppins", sans-serif; */
+  background: #ebe6ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ! video background */
+/* Fullscreen container for the page */
+.page-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Fullscreen background video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensures the video covers the entire screen */
+  z-index: -1; /* Places the video behind other content */
+}
+
+/* !login button(1st page) */
+/* Animated login button
+.login-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+} */
+
+/* !loginRegister */
+.content {
+  background-color: #fff;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  width: 50vw;
+  min-height: 480px;
+  max-width: 100%;
+}
+
+.content button {
+  background-color: #82257b;
+  color: #fff;
+  padding: 10px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(151, 142, 141, 0.5);
+  background-color: #82257b;
+}
+.header-text h1,
+.forgot a {
+  color: #82257b;
+}
+.right-box {
+  padding: 40px 30px 40px;
+}
+
+.switch-content {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  border-radius: 0 60px 60px 0;
+  z-index: 1000;
+}
+
+.content.active .switch-content {
+  transform: translateX(100%);
+  border-radius: 60px 0 0 60px;
+}
+
+.switch {
+  background-color: #82257b;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.content.active .switch {
+  transform: translateX(50%);
+}
+
+.switch-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+.switch-left {
+  transform: translateX(-200%);
+}
+.content.active .switch-left {
+  transform: translateX(0);
+}
+.switch-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.content.active .switch-right {
+  transform: translateX(200%);
+}
